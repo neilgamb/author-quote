@@ -19,7 +19,6 @@ function makeQuote(quote) {
     likeParent.appendChild(likes);
     parent.appendChild(text);
     parent.appendChild(author);
-    console.log(quote.pic);
     quoteBox.style.backgroundImage = "url("+quote.pic+")";
     
 
@@ -86,8 +85,6 @@ function deleteQuote() {
     parent.removeChild(author);
 
 }
-
-
 
 window.addEventListener('load', function () {
 
