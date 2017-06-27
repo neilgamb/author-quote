@@ -1,0 +1,68 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+
+body {
+    @include grid-row();
+    padding-top: 100px;
+
+
+    .quoteBox {
+        @include grid-column(6);
+        @include grid-column-offset(3);
+        height: 400px;
+        background-color: gray;
+        border: solid;
+        border-width: 1px;
+        font-family: 'Roboto', sans-serif;
+
+        .arrows {
+            @include grid-column(3);
+            // border: solid;
+            // border-width: 1px;
+            position: relative;
+            top: 340px;
+            box-sizing: border-box;
+
+            .back, .forward {
+                width: 30%;
+                // border: solid;
+                // border-width: 1px;
+                color: white;
+                font-size: 2.5rem;
+            }
+
+            .back {
+                margin-right: 10px;
+            }
+
+            .forward {
+                margin-left: 10px;
+            }
+
+        }
+
+        .quote {
+            @include grid-column(9);
+            background-color: #18A0FF;
+            height: 100%;
+            color: white;
+
+            .likes {
+                text-align: right;
+            }
+
+            h1 {
+                font-weight: 900;
+                font-size: 2.5rem;
+                margin-top: 0px;
+                margin-left: 20px;
+            }
+
+            h3 {
+                font-size: .8rem;
+                margin-left: 20px;
+            }
+        }
+    }
+}
