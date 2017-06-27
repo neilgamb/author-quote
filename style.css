@@ -1,0 +1,10 @@
+body {
+    background-color: lightgray;
+}
+
+main {
+    width: 700px;
+    height: 500px;
+    border: solid;
+    border-width: 1px;
+}
