@@ -6,7 +6,6 @@ body {
     @include grid-row();
     padding-top: 100px;
 
-
     .quoteBox {
         @include grid-column(6);
         @include grid-column-offset(3);

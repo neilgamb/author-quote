@@ -1,4 +1,6 @@
 function makeQuote(quote) {
+// Creates new / updates DOM elements using information
+// from the "quotes" array (see getQuote(#) function)
 
     let parent = document.querySelector('.quote');
     let likeParent = document.querySelector('.likeCount');
@@ -13,20 +15,21 @@ function makeQuote(quote) {
     text.classList.add("quoteText");
 
     let author = document.createElement('h3');
-    author.textContent = "- "+quote.author;
+    author.textContent = "- " + quote.author;
     author.classList.add("quoteAuthor");
 
     likeParent.appendChild(likes);
     parent.appendChild(text);
     parent.appendChild(author);
     quoteBox.style.backgroundImage = "url("+quote.pic+")";
-    
-
 }
 
-
-
 function getQuote(currentQuote) {
+// Updates the "currentQuote" object using the array of quotes below.
+// Each quote has a quote, author, like-count and pic (author)
+// Accepts 'currentQuote' argument, which changes when user clicks 'forward'
+// and 'backward' arrow buttons.  Please see window-load event listener for this
+// functionality
 
     let quotes = [
         {
@@ -73,6 +76,8 @@ function getQuote(currentQuote) {
 }
 
 function deleteQuote() {
+// Removes existing DOM prior to calling 'getQuote' when user advances 
+// arrow buttons
 
     let parent = document.querySelector('.quote');
     let likeParent = document.querySelector('.likeCount');
@@ -87,11 +92,12 @@ function deleteQuote() {
 }
 
 window.addEventListener('load', function () {
+// currentQuote is originally set to 0.  Allows user to increase or decrease
+// with limits of 0 to array.length
 
     let currentQuote = 0;
 
     getQuote(currentQuote);
-
 
     let back = document.querySelector('.back');
     back.addEventListener('click', function () {
@@ -117,11 +123,14 @@ window.addEventListener('load', function () {
         }
     });
 
-
 });
 
 
 function getQuotesLength() {
+// Retrieves the length of the 'quotes'
+// array for the if statement on ln 107. 
+// Thinking there is a much easier way to get this number without
+// having to create a separate function
 
     let quotes = [
         {
