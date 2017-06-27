@@ -1390,7 +1390,10 @@ body {
     height: 400px;
     background-image: url("https://image.ibb.co/jhV1Sk/sheldoncooper2.jpg");
     background-repeat: no-repeat;
-    font-family: 'Roboto', sans-serif; }
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75); }
     @media print, screen and (min-width: 40em) {
       body .quoteBox {
         padding-right: 0.9375rem;
@@ -1429,7 +1432,7 @@ body {
       height: 100%;
       color: white;
       position: relative;
-      left: 14px; }
+      left: 15px; }
       @media print, screen and (min-width: 40em) {
         body .quoteBox .quote {
           padding-right: 0.9375rem;

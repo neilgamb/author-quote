@@ -6,6 +6,7 @@ body {
     @include grid-row();
     padding-top: 100px;
 
+
     .quoteBox {
         @include grid-column(6);
         @include grid-column-offset(3);
@@ -13,6 +14,10 @@ body {
         background-image: url('https://image.ibb.co/jhV1Sk/sheldoncooper2.jpg');
         background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
+        -webkit-box-shadow: 10px 10px 64px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 64px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 64px 0px rgba(0,0,0,0.75);
+
 
         .arrows {
             @include grid-column(3);
@@ -45,7 +50,7 @@ body {
             height: 100%;
             color: white;
             position: relative;
-            left: 14px;
+            left: 15px;
 
             .likeCount {
                 background-color: #1690E5;
